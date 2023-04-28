@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.w-logo {
+    width: 60vw !important;
+}
+main {
+    min-height: 60vh !important;
+}
+.color-fondo {
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%) !important;
+}
+.logo {
+    width: 90px !important;
+}
+.carousel-item-img1 { 
+    height: 55vh !important;
+}
+.carousel-item-img2{ 
+    height: 55vh !important;
+}
+.carousel-item-img3{ 
+    height: 55vh !important;
+    object-fit: cover;
+    object-position: bottom;
+    
+}
+.carousel-item-img4 { 
+    height: 50vh !important;
+}
+.carousel-item-img5{ 
+    height: 50vh !important;
+}
+.carousel-item-img6{ 
+    height: 50vh !important;
+    object-fit: cover;   
+}
+.caja-carousel {
+    width: 70vw !important;
+}
+.carousel-contenedor h2 {
+    border-radius: 10px;
+    background-color: rgba(46, 55, 63, 0.479);
+    font-size: 4rem !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+} 
+.carousel-contenedor h3 {
+    border-radius: 10px;
+    background-color: rgba(20, 25, 31, 0.658);
+    font-size: 3rem !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+} 
+.fondo-cards {
+    background-color: rgba(27, 23, 23, 0.267) !important;
+}
+.img-card {
+    height: 50%;
+}
+.boton-search {
+    height: 2rem !important;
+    width: 2.5rem !important;
+    background-color: rgba(137, 165, 216, 0.836) !important;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+.navegador-barra {
+    background-color: rgba(226, 218, 216, 0.856);
+}
+footer {
+    min-height: 10vh !important;
+    background-color: black;
+    margin: 1rem;
+    margin-bottom: 0 !important;
+}
+.h-30 {
+    height: 10vh !important;
+}
+.fondo-upcoming {
+    height: 30vh !important;
+    background-image: url(https://static.wixstatic.com/media/4355b88c5595498c8c872247aab7ca2d.jpg/v1/fill/w_980,h_451,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4355b88c5595498c8c872247aab7ca2d.jpg) !important;
+    background-size: cover !important;
+    background-position: bottom;
+}
+.header-h {
+    min-height:55vh !important;
+}
+.fondo-past {
+    background-image: url(https://staff360.es/wp-content/uploads/2022/08/staff360-servicios-cabecera-marketing-comunicacion.jpg) !important;
+    background-size: cover !important;
+    
+}
+.fondo-contact {
+    background-image: url(https://i.pinimg.com/736x/fc/78/9c/fc789c44d70e2023130dcaa137f9892a.jpg) !important;
+    margin: 2rem !important;
+    opacity: 0.9 !important;
+}
+textarea {
+    resize: none;
+}
+table {
+    width: 90vw !important;
+}
+table, th, tr, td {
+    border: 2px solid white !important;
+    border-collapse: collapse !important;
+    text-align: center !important;
+}
+caption {
+    padding: 0.3em;
+    color: #fff;
+    background: #000;
+    caption-side: top !important;
+}
