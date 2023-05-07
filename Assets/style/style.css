@@ -54,28 +54,29 @@ main {
 } 
 .fondo-cards {
     background-color: rgba(27, 23, 23, 0.267) !important;
+    color: white !important;
 }
 .img-card {
-    height: 50%;
+    height: 50% !important;
 }
 .boton-search {
     height: 2rem !important;
     width: 2.5rem !important;
     background-color: rgba(137, 165, 216, 0.836) !important;
-    border-radius: 5px;
+    border-radius: 5px !important;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
 }
 .navegador-barra {
-    background-color: rgba(226, 218, 216, 0.856);
+    background-color: rgba(226, 82, 57, 0.356) !important;
 }
 footer {
-    min-height: 10vh !important;
-    background-color: black;
-    margin: 1rem;
+    height: 8vh !important;
+    background-color: black !important;
+    margin: 1rem !important;
     margin-bottom: 0 !important;
 }
 .h-30 {
-    height: 10vh !important;
+    height: 7vh !important;
 }
 .fondo-upcoming {
     height: 30vh !important;
@@ -95,6 +96,8 @@ footer {
     background-image: url(https://i.pinimg.com/736x/fc/78/9c/fc789c44d70e2023130dcaa137f9892a.jpg) !important;
     margin: 2rem !important;
     opacity: 0.9 !important;
+    width: 70vw !important;
+    margin-left: 12rem !important;
 }
 textarea {
     resize: none;
@@ -103,13 +106,19 @@ table {
     width: 90vw !important;
 }
 table, th, tr, td {
+    color: white;
+    width: 65vw !important;
     border: 2px solid white !important;
     border-collapse: collapse !important;
     text-align: center !important;
+    border-radius: 10px !important;
 }
 caption {
     padding: 0.3em;
     color: #fff;
     background: #000;
     caption-side: top !important;
+}
+.pt-1 {
+    padding-top: 5px !important;
 }
