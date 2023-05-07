@@ -70,13 +70,13 @@ main {
     background-color: rgba(226, 82, 57, 0.356) !important;
 }
 footer {
-    height: 8vh !important;
+    height: 6vh !important;
     background-color: black !important;
     margin: 1rem !important;
     margin-bottom: 0 !important;
 }
 .h-30 {
-    height: 7vh !important;
+    height: 5vh !important;
 }
 .fondo-upcoming {
     height: 30vh !important;
