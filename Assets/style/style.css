@@ -122,3 +122,28 @@ caption {
 .pt-1 {
     padding-top: 5px !important;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 810px) {
+    .checkbox_lista {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        gap: 0 !important;
+    }
+    #checkboxhome{
+        justify-content: center !important;
+    }
+    
+}
+@media only screen and (min-width: 320px) and (max-width: 768px){
+    #contenedorDetails {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    
+    #imagenDetails {
+        width: 100% !important;
+        height: 20rem !important;
+    }
+}

@@ -71,32 +71,22 @@
      </div>
       <section class="m-5" >
         <h3 class="text-white text-center">All Our Events</h3>
-        <div class="d-flex flex-wrap justify-content-end p-3 gap-5 text-white">
-          <form></form>
-          <fieldset>
-            <label for="Food">Food Fair</label>
-            <input type="checkbox" name="Food" id="Food">
-            <label for="Cine">Cinema</label>
-            <input type="checkbox" name="Cine" id="Cine">
-            <label for="Museos">Museum</label>
-            <input type="checkbox" name="Museos" id="Museos">
-            <label for="Party">Costume Party</label>
-            <input type="checkbox" name="Party" id="Party">
-            <label for="Race">Race</label>
-            <input type="checkbox" name="Race" id="Race">
-            <label for="Book">Book Exchange</label>
-            <input type="checkbox" name="Book" id="Book">
-            <label for="Conciert">Music Conciert</label>
-            <input type="checkbox" name="Conciert" id="Conciert">
+        <div  class=" text-white">
+          <fieldset id="checkboxIndex" class="checkbox_lista form-check form-switch form-check-reverse d-flex flex-wrap col-12 justify-content-center gap-5 ">
+            <!-- <div>
+              <label class="form-check-label" for="${category}">${category}</label>
+              <input class="form-check-input" type="checkbox"  value ="${category}" id="eventosCheckbox">
+           </div>  -->
           </fieldset>
-          <div >
+         
+          <div  class="d-flex justify-content-end p-2">
             <input class="navegador-barra" type="text" name="navegador" id="navegador">
             <label for="navegador">
               <input type="submit" name="navegador" value="🔍︎" class="boton-search">
             </label>
           </div>
-        </div>
-        <article class="d-flex flex-wrap justify-content-evenly gap-3" id="cards">
+        </div> 
+        <article class="d-flex flex-wrap justify-content-evenly gap-3" id="contenedor_cards">
           <!-- <div class="card fondo-cards " style="width: 18rem;">
                 <img src="Assets/images/Feria-de-comidas7.jpg" class="card-img-top img-card" alt="Festival of the collectivities">
               <div class="card-body">
@@ -126,7 +116,8 @@
         <h5 class="pt-2 text-white">Cohort 47|Guzmán Tatiana</h5>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="./Assets/informationAdicional/datos.js"></script>
+    <script src="./Assets/informationAdicional/data.js"></script>
     <script src="./Assets/js/index.js"></script>
+    <script src="./Assets/cards/details.js"></script>
 </body>   
 </html>
