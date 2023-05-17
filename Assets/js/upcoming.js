@@ -1,7 +1,27 @@
-console.log(data);
 let cards = document.getElementById("cards")
 let checkbox = document.getElementById ("checkboxUpcoming")
 let navegador = document.getElementById("navegador")
+
+let infoUpcoming
+let filtroCards
+let newArrayCategory
+fetch (`https://mindhub-xj03.onrender.com/api/amazing`)
+.then (res => res.json())
+.then (data=>{
+    infoUpcoming = data
+    filtroCards = infoUpcoming.events.filter (evento => evento.date > infoUpcoming.currentDate)
+    crearCard(filtroCards, cards)
+    const checkboxCategory = infoUpcoming.events.map( evento => evento.category)
+    const checkboxSet = new Set (checkboxCategory) 
+    newArrayCategory = Array.from (checkboxSet)
+    //pintarCheckbox
+    const templateCheckbox = newArrayCategory.reduce(reduceCheckbox, "") 
+    checkbox.innerHTML = templateCheckbox
+    
+})
+.catch(error => console.log(error))
+
+//presentar cartas
 function presentarCards(events){
     return `<div class="card fondo-cards " style="width: 18rem;">
      <img src="${events.image} " class="card-img-top img-card" alt="Festival of the collectivities">
@@ -15,40 +35,31 @@ function presentarCards(events){
         <a href="../cards/details.html?_id=${events._id} " class="btn btn-primary">See More...</a>
     </div>
 </div>`
-}
+} 
+
+//plasmar cartas
 function crearCard(array, donde) {
     let template = ""
     if (array.length == 0){
-        template = "No hay nada"
+        template = "There are no such events"
     }
     for (let evento of array) {
         template += presentarCards (evento)
     }
     donde.innerHTML = template
 }
+
+//pintar checkbox
+let reduceCheckbox = (acc, category, indice, array) => {
+    return acc += `<div>
+    <label class="form-check-label" for="${category}">${category}</label>
+    <input class="form-check-input" type="checkbox"  value ="${category}" id="${category}">
+ </div> `
+}
+
 function filtrar(eventos) {
     return eventos.date > data.currentDate
 }
-let filtroCards = data.events.filter ((filtrar))
-crearCard(filtroCards, cards)
-
-
-const checkboxCategory = data.events.filter(evento => evento.date < data.currentDate)/* .map( evento => evento.category ) */
-console.log(checkboxCategory);
-function cardPastEvent(array, checkbox) {
-    let template = ""
-    for (let evento of array) {
-        template += presentarCheckbox (evento)
-    }
-    checkbox.innerHTML = template
-}
-function presentarCheckbox (eventos) {
-    return `<div >
-    <label class="form-check-label" for="${eventos.category}">${eventos.category}</label>
-    <input class="form-check-input" type="checkbox"  value ="${eventos.category}" id="eventosCheckbox">
- </div> `
-}
-cardPastEvent ( checkboxCategory, checkbox)
 
 function filtrarCheckbox (events, categorias) {
     if (categorias.length == 0) {
@@ -56,22 +67,21 @@ function filtrarCheckbox (events, categorias) {
     }
     return events.filter(evento => categorias.includes(evento.category))
 }
-
-navegador.addEventListener (`input`,()=> {
-    filtroDoble()
-})
-function filtrarTituloCards(events, buscador) {
-    return events.filter(tarjeta => tarjeta.name.toLowerCase().includes(buscador.toLowerCase()))
-}
-checkbox.addEventListener('change', ()=>{
-    filtroDoble()
-})
 function filtrarSeleccionadas(events, valorPorBusqueda) {
     return events.filter(evento =>evento.name.includes(valorPorBusqueda))
 }
+function filtrarTituloCards(events, buscador) {
+    return events.filter(tarjeta => tarjeta.name.toLowerCase().includes(buscador.toLowerCase()))
+}
+navegador.addEventListener (`input`,()=> {
+    filtroDoble()
+})
+checkbox.addEventListener('change', ()=>{
+    filtroDoble()
+})
 function filtroDoble() {
     const checkboxChecked = Array.from (document.querySelectorAll (`input[type="checkbox"]:checked`)).map(check => check.value)
-    let filtroBusqueda = filtrarTituloCards (data.events, navegador.value)
+    let filtroBusqueda = filtrarTituloCards (filtroCards, navegador.value)
     let checkDoble = filtrarCheckbox (filtroBusqueda, checkboxChecked)
     crearCard (checkDoble, cards)
 
